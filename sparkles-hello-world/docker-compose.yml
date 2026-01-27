@@ -1,14 +1,17 @@
-version: "3.7"
-
+version: '2'
 services:
-
-  app_proxy:
+  octoeverywhere-bambu-connect:
+    image: octoeverywhere/octoeverywhere:latest
     environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+        # Requried to set the docker conntainer in Bambu Connect mode.
+      - COMPANION_MODE=bambu
+        # https://octoeverywhere.com/s/access-code
+      - ACCESS_CODE=41373485
+        # https://octoeverywhere.com/s/bambu-sn
+      - SERIAL_NUMBER=03919D530102408
+        # https://octoeverywhere.com/s/bambu-ip
+      - PRINTER_IP=192.168.12.191
+
+    volumes:
+      # This can also be an absolute path as well.
+      - ./data:/data
