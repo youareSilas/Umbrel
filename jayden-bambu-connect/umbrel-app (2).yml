@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: Bambu Connect
+name: Bambu Connect
+tagline: 
+icon: https://play-lh.googleusercontent.com/bZWl1LFsAtsXpldY0R-PNCY04kNs_ifP_JU341gmos3FIIXlIz-3AV0bnd8fAxJPZC8C
+category: 
+version: "1.0.0"
+port: 
+description: >-
+
+developer: Umbrel
+website: 
+submitter: Umbrel
+submission: 
+repo: 
+support: 
+gallery:
+
+releaseNotes: >-
+  Add what's new in the latest version of your app here.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

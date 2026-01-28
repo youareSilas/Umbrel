@@ -1,0 +1,17 @@
+version: '2'
+services:
+  octoeverywhere-bambu-connect:
+    image: octoeverywhere/octoeverywhere:latest
+    environment:
+        # Requried to set the docker conntainer in Bambu Connect mode.
+      - COMPANION_MODE=bambu
+        # https://octoeverywhere.com/s/access-code
+      - ACCESS_CODE=41373485
+        # https://octoeverywhere.com/s/bambu-sn
+      - SERIAL_NUMBER=03919D530102408
+        # https://octoeverywhere.com/s/bambu-ip
+      - PRINTER_IP=192.168.12.191
+
+    volumes:
+      # This can also be an absolute path as well.
+      - ./data:/data
